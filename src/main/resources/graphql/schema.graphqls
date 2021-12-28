@@ -1,0 +1,31 @@
+type Restaurant {
+	id:ID!,
+	name: String,
+	description: String,
+	menu: Menu
+}
+
+type Menu {
+	id: ID!,
+	restaurant: Restaurant,
+	items: [Item]
+}
+
+type Item {
+	id: ID!,
+	name: String,
+	price: Float,
+	menu: Menu
+}
+
+type Query {
+	restaurants(count: Int):[Restaurant]
+	restaurant(id: ID):Restaurant
+	item(name: String):Item
+}
+
+type Mutation {
+	createItem(name: String, price: Float, menu: Int):Item
+	createRestaurant(name: String, description: String, menu: Int):Restaurant
+}
+
