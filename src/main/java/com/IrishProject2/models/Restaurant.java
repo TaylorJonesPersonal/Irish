@@ -40,4 +40,7 @@ public class Restaurant {
 	@JoinColumn(name="menu", referencedColumnName="menu_id")
 	private Menu menu;
 	
+	@Column(name="image_url")
+	private String imageURL;
+	
 }
