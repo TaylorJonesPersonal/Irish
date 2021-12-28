@@ -32,13 +32,14 @@ public class RestaurantService {
 	}
 	
 	@Transactional
-	public Restaurant createRestaurant(String name, String description, int menu) {
+	public Restaurant createRestaurant(String name, String description, int menu, String imageURL) {
 		Menu newMenu = new Menu();
 		newMenu.setId(menu);
 		final Restaurant newRestaurant = new Restaurant();
 		newRestaurant.setName(name);
 		newRestaurant.setDescription(description);
 		newRestaurant.setMenu(newMenu);
+		newRestaurant.setImageURL(imageURL);
 		return restaurantRepository.save(newRestaurant);
 	}
 
