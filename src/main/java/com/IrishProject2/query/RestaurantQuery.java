@@ -6,9 +6,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.IrishProject2.models.Customer;
 import com.IrishProject2.models.Item;
 import com.IrishProject2.models.Menu;
 import com.IrishProject2.models.Restaurant;
+import com.IrishProject2.service.CustomerService;
 import com.IrishProject2.service.ItemService;
 import com.IrishProject2.service.MenuService;
 import com.IrishProject2.service.RestaurantService;
@@ -25,6 +27,9 @@ public class RestaurantQuery implements GraphQLQueryResolver {
 	
 	@Autowired
 	private ItemService itemService;
+	
+	@Autowired
+	private CustomerService customerService;
 	
 	public Optional<Restaurant> getRestaurant(int id){
 		return this.restaurantService.getRestaurant(id);
@@ -44,6 +49,10 @@ public class RestaurantQuery implements GraphQLQueryResolver {
 	
 	public Item getItem(String name) {
 		return this.itemService.getItemByName(name);
+	}
+	
+	public List<Customer> getCustomers(int count) {
+		return this.customerService.getAllCustomers(count);
 	}
 
 }
