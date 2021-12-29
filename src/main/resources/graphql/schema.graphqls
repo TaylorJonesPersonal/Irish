@@ -33,6 +33,7 @@ type Query {
 	restaurant(id: ID):Restaurant
 	item(name: String):Item
 	customers(count: Int): [Customer]
+	customer(username: String):Customer
 }
 
 type Mutation {

@@ -9,5 +9,5 @@ import com.IrishProject2.models.Customer;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer>{
 	
-
+	public Customer findByUsername(String username);
 }
