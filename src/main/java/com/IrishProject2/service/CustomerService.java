@@ -24,6 +24,11 @@ public class CustomerService {
 		return this.customerRepository.findAll().stream().limit(count).collect(Collectors.toList());
 	}
 	
+	@Transactional(readOnly = true)
+	public Customer getCustomerByUsername(String username) {
+		return this.customerRepository.findByUsername(username);
+	}
+	
 	@Transactional
 	public Customer createCustomer(String firstName, String lastName, String email, String username, String password) {
 		Customer newCustomer = new Customer();

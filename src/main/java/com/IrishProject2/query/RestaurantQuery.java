@@ -54,5 +54,9 @@ public class RestaurantQuery implements GraphQLQueryResolver {
 	public List<Customer> getCustomers(int count) {
 		return this.customerService.getAllCustomers(count);
 	}
+	
+	public Customer getCustomer(String username) {
+		return this.customerService.getCustomerByUsername(username);
+	}
 
 }
