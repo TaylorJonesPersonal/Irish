@@ -19,6 +19,15 @@ type Item {
 	menu: Menu
 }
 
+type Customer {
+	id: ID!,
+	firstName: String,
+	lastName: String,
+	email: String,
+	username: String,
+	password: String
+}
+
 type Query {
 	restaurants(count: Int):[Restaurant]
 	restaurant(id: ID):Restaurant
@@ -28,5 +37,6 @@ type Query {
 type Mutation {
 	createItem(name: String, price: Float, menu: Int):Item
 	createRestaurant(name: String, description: String, menu: Int, imageURL:String):Restaurant
+	createCustomer(firstName: String, lastName: String, email: String, username: String, password: String):Customer
 }
 
