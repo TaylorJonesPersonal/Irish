@@ -30,13 +30,14 @@ public class CustomerService {
 	}
 	
 	@Transactional
-	public Customer createCustomer(String firstName, String lastName, String email, String username, String password) {
+	public Customer createCustomer(String firstName, String lastName, String email, String username, String password, String gender) {
 		Customer newCustomer = new Customer();
 		newCustomer.setFirstName(firstName);
 		newCustomer.setLastName(lastName);
 		newCustomer.setEmail(email);
 		newCustomer.setUsername(username);
 		newCustomer.setPassword(password);
+		newCustomer.setGender(gender);
 		return customerRepository.save(newCustomer);
 	}
 }

@@ -40,4 +40,7 @@ public class Customer {
 	
 	@Column(name="password")
 	private String password;
+	
+	@Column(name="gender")
+	private String gender;
 }
