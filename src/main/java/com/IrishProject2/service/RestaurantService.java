@@ -28,7 +28,7 @@ public class RestaurantService {
 	
 	@Transactional(readOnly = true)
 	public List<Restaurant> getAllRestaurants(int count){
-		return this.restaurantRepository.findAll().stream().limit(count).collect(Collectors.toList());
+		return this.restaurantRepository.findByOrderByIdAsc().stream().limit(count).collect(Collectors.toList());
 	}
 	
 	@Transactional
