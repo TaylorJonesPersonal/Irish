@@ -4,6 +4,8 @@ type Restaurant {
 	description: String,
 	menu: Menu,
 	imageURL: String
+	restaurantLatitude: Float,
+	restaurantLongitude: Float,
 }
 
 type Menu {
@@ -39,7 +41,7 @@ type Query {
 
 type Mutation {
 	createItem(name: String, price: Float, menu: Int):Item
-	createRestaurant(name: String, description: String, menu: Int, imageURL:String):Restaurant
+	createRestaurant(name: String, description: String, menu: Int, imageURL:String, restaurantLatitude: Float, restaurantLongitude: Float):Restaurant
 	createCustomer(firstName: String, lastName: String, email: String, username: String, password: String, gender: String):Customer
 }
 
