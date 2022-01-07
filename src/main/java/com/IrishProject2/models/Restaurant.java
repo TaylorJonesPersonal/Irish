@@ -43,4 +43,10 @@ public class Restaurant {
 	@Column(name="image_url")
 	private String imageURL;
 	
+	@Column(name="location_latitude")
+	private Float restaurantLatitude;
+	
+	@Column(name="location_longitude")
+	private Float restaurantLongitude;
+	
 }

@@ -32,7 +32,7 @@ public class RestaurantService {
 	}
 	
 	@Transactional
-	public Restaurant createRestaurant(String name, String description, int menu, String imageURL) {
+	public Restaurant createRestaurant(String name, String description, int menu, String imageURL, long restaurantLatitude, long restaurantLongitude) {
 		Menu newMenu = new Menu();
 		newMenu.setId(menu);
 		final Restaurant newRestaurant = new Restaurant();
@@ -40,6 +40,8 @@ public class RestaurantService {
 		newRestaurant.setDescription(description);
 		newRestaurant.setMenu(newMenu);
 		newRestaurant.setImageURL(imageURL);
+		newRestaurant.setRestaurantLatitude(restaurantLatitude);
+		newRestaurant.setRestaurantLongitude(restaurantLongitude);
 		return restaurantRepository.save(newRestaurant);
 	}
 

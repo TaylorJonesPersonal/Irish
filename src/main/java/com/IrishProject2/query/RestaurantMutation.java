@@ -27,8 +27,8 @@ public class RestaurantMutation implements GraphQLMutationResolver {
 		return this.itemService.createItem(name, price, menu);
 	}
 	
-	public Restaurant createRestaurant(String name, String description, int menu, String imageURL) {
-		return this.restaurantService.createRestaurant(name, description, menu, imageURL);
+	public Restaurant createRestaurant(String name, String description, int menu, String imageURL, long restaurantLatitude, long restaurantLongitude) {
+		return this.restaurantService.createRestaurant(name, description, menu, imageURL, restaurantLatitude, restaurantLongitude);
 	}
 	
 	public Customer createCustomer(String firstName, String lastName, String email, String username, String password, String gender) {
