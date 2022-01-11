@@ -1,0 +1,8 @@
+{
+"restaurants": [
+    {"id":"1", "name":"O'Donelly's Stew and Sheep Barn", "menu": [{"name":"Beef Stew", "price": 10}, {"name": "Haggis", "price": 12}], "description": "We are a full-service family restaurant, as well as a convenient place to stable your livestock. Prices negotiable."},
+    {"id":"2", "name":"The Putrid Cabbage", "menu": [{"name": "Red Cabbage", "price": 6}, {"name":"Steamed Cabbage", "price": 6}], "description":"If you don't mind a few hundred bad reviews and cabbage is your jam, we're the place for you."},
+    {"id":"3", "name":"Rosey's Beer and Nothing Else", "menu": [{"name": "Guinness", "price": 7}, {"name": "Coors Light", "price": 4}], "description":"Come on in out of the cold and enjoy a full-headed round of Guinness. Our waiters/waitresses have both their legs."},
+    {"id":"4", "name": "The Potato Famine", "menu": [{"name": "The Promise of Food Later", "price": 2}, {"name": "Endless Hunger", "price": 0}], "description":"We have not had a shipment of food since the fall of communism. We're sorry for the inconvenience."}
+]
+}
